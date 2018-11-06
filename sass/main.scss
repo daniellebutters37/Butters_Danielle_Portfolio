@@ -1,0 +1,283 @@
+//import all of my css variables
+@import '_vars';
+
+//import media queries
+@import '_mediaqueries';
+
+//Generals
+
+h3, p, span, a {
+    font-family: $main-font;
+}
+
+i {
+    color: $light-color;
+}
+
+.hidden {
+	display: none;
+}
+
+.sectionHeading {
+    font-size: 2em;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+//menu
+    //hamburger
+.hamburger {
+    position: fixed;
+    width: 50px;
+    height: 45px;
+    top: 10px;
+    right: 20px;
+    z-index: 5;
+}
+
+.hamburger div {
+    position: relative;
+    width: 90%;
+    height: 5px;
+    background-color: #ffbd71;
+    margin-top: 8px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+  
+#toggle {
+    display: none;
+}
+  
+    //hamburger animation
+#toggle:checked + .hamburger .top {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin-top: 22.5px;
+}
+  
+#toggle:checked + .hamburger .middle {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -5px;
+}
+  
+#toggle:checked + .hamburger .bottom {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+  
+#toggle:checked + .hamburger + .nav {
+    top: 0;
+}
+  
+    //menu style
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(50, 53, 55, 0.90);
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+  
+.nav .navWrapper {
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+}
+  
+// nav {
+//     height: 100vh;
+//     text-align: center;
+// }
+  
+.nav a {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 15px;
+    color: $light-color;
+    opacity: 0;
+    text-decoration: none;
+    font-size: 2.3em;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+  
+.nav a:hover {
+    color:$neutral-color;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+  
+.nav a:first-child {
+    margin-top: 0;
+}
+  
+  /* Dropdown Animation */
+#toggle:checked + .hamburger + .nav .navWrapper nav a {
+    opacity: 0.9;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+
+
+//header
+
+#header {
+    background-image: url("../images/main_image1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 500px;
+}
+
+#name {
+    padding-left: 10%;
+    padding-top: 10%;
+    color: $light-color;
+    font-size: 3em;
+}
+
+.role {
+    padding-left: 10%;
+    padding-top: 2%;
+    line-height: 20px;
+}
+
+//About 
+
+#aboutText {
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-bottom: 5%;
+}
+
+#aboutIcons {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 5%;
+}
+
+#aboutIcons i  {
+    margin: 2%;
+}
+
+
+//portfolio
+
+#portfolio {
+    background-color: $dark-color;
+    padding-top: 0.5%;
+    color: $neutral-color;
+}
+
+#rowOne {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 9%;
+}
+
+#rowTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 9%;
+}
+
+.thumbnail {
+    width: 70%;
+    height: 35vh;
+    background-color: $neutral-color;
+}
+
+.title {
+    color: $neutral-color;
+}
+
+.number {
+    color: $light-color;
+    font-weight: bold;
+}
+
+
+//video reel
+
+#videoReel {
+    display: grid;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 10%;
+}
+
+
+//contact
+
+#contact {
+    display: grid;
+     grid-template-columns: 1fr 1fr;
+}
+
+#contactLine {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+#contactText {
+   grid-column: 1/2;
+   grid-row: 3/4;
+   margin-left: 20%;
+   margin-right: 20%;
+}
+
+#contactText p {
+    padding-bottom: 10%;
+}
+
+#contactForm {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: right;
+    margin-right: 20%;
+}
+
+label {
+    color: $light-color;
+    font-family: $main-font;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 70%;
+    border: none;
+    background-color: $dark-color;
+    height: 3em;
+    margin-bottom: 3%;
+    border-radius:0.2em;
+    padding-left: 1%;
+}
+
+textarea {
+    height: 7em;
+    border-radius:0.2em;
+}
+
+#submitBtn {
+    width: 20%;
+    background-color: $light-color;
+    color: $neutral-color;
+    border-radius:0.2em;
+    align-self: start;
+}
+
+//Footer
+
+#copyright {
+    text-align: center;
+    margin: 2%;
+}

@@ -1,4 +1,4 @@
-# Butters_Danielle_Portfolio
+# Portfolio Website: Danielle Butters
 
 **Motivation**
 This project aims to create a dynamic portfolio website to showcase my work throughtout the semester.

@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
+    <main id="app">
 <header id="header">
 
         <input id="toggle" type="checkbox"/>
@@ -34,19 +36,23 @@
           </div>
         </div>
 
-    <div id="intro"></div>
-        <p id="name">danielle<br><span>butters</span></p>
-        <p class="role">designer<br><span>developer</span></p>
-    </div>
+        <div id="intro">
+            <p id="name">danielle<br><span>butters</span></p>
+            <p class="role">designer<br><span>developer</span></p>
+        </div>
 
-    <img src="images/line1.svg">
+        <!-- <img id="face" src="images/face.svg" alt="Face"> -->
+        <object id="face"data="images/face.svg" type="image/svg+xml"></object>
+
+        <img id="lineHeader" src="images/line_header.svg" alt="Line">
+
 </header>
+
+<img id="lineHeader" src="images/line_header.svg" alt="Line">
 
 <section id="about">
     <h2 class="hidden">About Section</h2>
     <p class="sectionHeading">about</p>
-    
-    <img src="images/line2.svg">
 
     <p id="aboutText">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
     voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati 
@@ -55,11 +61,12 @@
     libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
     maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
 
+    <img src="images/line_about.svg" alt="Line">
+
     <div id="aboutIcons">
-        <i class="fas fa-headphones-alt"></i>
-        <i class="fas fa-running"></i>
-        <i class="fas fa-coffee"></i>
-        <i class="fas fa-book-reader"></i>
+        <img src="images/yoga_icon.svg" alt="Yoga">
+        <img src="images/music_icon.svg" alt="Music">
+        <img src="images/book_icon.svg" alt="Reading">
     </div>
 </section>
 
@@ -68,46 +75,16 @@
     <p class="sectionHeading">portfolio</p>
 
     <div id="portfolioSelection">
-        <div id="rowOne">
-            <div id="one">
-                <img class="thumbnail" src="images/#.jpg">
-                <h3 class="number">01</h3>
-                <p class="title">porfolio piece title</p>
-            </div>
-            <div id="two">
-                <img class="thumbnail" src="images/#.jpg">
-                <h3 class="number">02</h3>
-                <p class="title">porfolio piece title</p>
-            </div>
-            <div id="three">
-                <img class="thumbnail" src="images/#.jpg">
-                <h3 class="number">03</h3>
-                <p class="title">porfolio piece title</p>
-            </div>
-        </div>  
-
-        <img src="images/line3.svg">
-
-        <div id="rowTwo">
-            <div id="four">
-                <img class="thumbnail" src="images/#.jpg">
-                <h3 class="number">04</h3>
-                <p class="title">porfolio piece title</p>
-            </div>
-            <div id="five">
-                <img class="thumbnail" src="images/#.jpg">
-                <h3 class="number">05</h3>
-                <p class="title">porfolio piece title</p>
-            </div>
-            <div id="six">
-                <img class="thumbnail" src="images/#.jpg">
-                <h3 class="number">06</h3>
-                <p class="title">porfolio piece title</p>
-            </div>
+        <img id="linePortfolio" src="images/line_portfolio.svg" alt="Line">
+        <div id="one" class="item">
+            <img v-on:click="fetchData" class="thumbnail" :src="'images/thumbnails/'+ projectThumbnail">
+            <h3 class="number">{{ projectNumber }}</h3>
+            <p class="title">{{ projectName }}</p>
         </div>
     </div>
+</section>
 
-    <img src="images/line4.svg">
+<section id="video">
 
     <video id="videoReel">
         <source src="video/trailer.mp4" type="video/mp4"/>
@@ -118,7 +95,7 @@
     <div class="controls hideMe">
         <Button id="pPlay" ><i id="pPlayBtn" class="far fa-play-circle"></i></button>
         <button id="volMute" ><i class="far fa-pause-circle"></i></button>
-        <input id="volControl" type="range" min="0" max="100" step="1">
+        <!-- <input id="volControl" type="range" min="0" max="100" step="1"> -->
     </div>
 </section>
 
@@ -126,7 +103,7 @@
     <h2 class="hidden">Contact Section</h2>
     <p class="sectionHeading">contact</p>
 
-    <img id="contactLine" src="images/line5.svg">
+    <img id="contactLine" src="images/line_contact.svg" alt="Line">
 
     <div id="contactText">
         <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
@@ -159,6 +136,7 @@
     <h2 class="hidden">Footer</h2>
         <p id="copyright">&copy; danielle butters 2018</p>
 </footer>
+</main>
 	<script src="js/main.js"></script>
 </body>
 </html>

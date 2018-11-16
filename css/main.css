@@ -1,35 +1,26 @@
-h3, p, span, a {
+h3, p, a {
   font-family: "Montserrat", sans-serif;
-}
-
-i {
-  color: #ffbd71;
+  color: #000;
 }
 
 .hidden {
   display: none;
 }
 
-.sectionHeading {
-  font-size: 2em;
-  margin-top: 5%;
-  margin-left: 10%;
-}
-
 .hamburger {
   position: fixed;
   width: 50px;
   height: 45px;
-  top: 10px;
+  top: 20px;
   right: 20px;
   z-index: 5;
 }
 
 .hamburger div {
   position: relative;
-  width: 90%;
-  height: 5px;
-  background-color: #ffbd71;
+  width: 75%;
+  height: 2px;
+  background-color: #5E7EA7;
   margin-top: 8px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -48,7 +39,7 @@ i {
 #toggle:checked + .hamburger .middle {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  margin-top: -5px;
+  margin-top: -2.02px;
 }
 
 #toggle:checked + .hamburger .bottom {
@@ -62,6 +53,7 @@ i {
 
 .nav {
   position: fixed;
+  z-index: 2;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -78,14 +70,40 @@ i {
 .nav .navWrapper {
   position: relative;
   overflow-y: auto;
-  height: 100%;
+  height: 100vh;
 }
 
+nav {
+  height: 100%;
+  text-align: center;
+  margin-top: 25%;
+}
+
+.nav li {
+  margin-bottom: 15%;
+}
+
+@media (min-width: 600px) {
+  nav {
+    margin-top: 20%;
+  }
+
+  .nav li {
+    margin-bottom: 15%;
+  }
+}
+@media (min-width: 800px) {
+  nav {
+    margin-top: 15%;
+  }
+
+  .nav li {
+    margin-bottom: 5%;
+  }
+}
 .nav a {
   width: 100%;
-  padding: 10px 0;
-  margin-top: 15px;
-  color: #ffbd71;
+  color: #fff;
   opacity: 0;
   text-decoration: none;
   font-size: 2.3em;
@@ -94,7 +112,7 @@ i {
 }
 
 .nav a:hover {
-  color: #fff;
+  color: #A3B7D0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -103,105 +121,181 @@ i {
   margin-top: 0;
 }
 
-/* Dropdown Animation */
 #toggle:checked + .hamburger + .nav .navWrapper nav a {
   opacity: 0.9;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
 
+.sectionHeading {
+  width: 30%;
+  font-size: 1.5em;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
 #header {
-  background-image: url("../images/main_image1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#face {
+  grid-column: 2/3;
+  width: 90%;
+  margin-top: 55%;
+  justify-self: center;
+}
+
+#lineHeader {
+  position: absolute;
+  top: 28%;
+}
+
+#intro {
+  grid-column: 1/2;
+  margin-top: 40%;
+  margin-left: 20%;
 }
 
 #name {
-  padding-left: 10%;
-  padding-top: 10%;
-  color: #ffbd71;
-  font-size: 3em;
+  color: #5E7EA7;
+  font-size: 1.8em;
 }
 
 .role {
-  padding-left: 10%;
   padding-top: 2%;
-  line-height: 20px;
+  line-height: 1.2em;
+  font-size: 0.5em;
+}
+
+@media (min-width: 600px) {
+  #name {
+    font-size: 2.8em;
+  }
+
+  .role {
+    font-size: 1.5em;
+  }
+
+  #face {
+    width: 70%;
+    margin-top: 35%;
+    justify-self: center;
+  }
+
+  #intro {
+    margin-top: 20%;
+    margin-left: 20%;
+  }
+
+  #lineHeader {
+    top: 30%;
+  }
+}
+@media (min-width: 800px) {
+  #header {
+    margin: 0 auto;
+  }
+
+  #face {
+    width: 60%;
+    margin-top: 25%;
+    justify-self: center;
+  }
+
+  #intro {
+    margin-top: 15%;
+  }
+
+  #lineHeader {
+    top: 35%;
+  }
+}
+#about {
+  padding-top: 20%;
 }
 
 #aboutText {
   width: 70%;
   margin: 0 auto;
-  text-align: justify;
-  padding-bottom: 5%;
+  text-align: center;
+  line-height: 20px;
+  padding-top: 5%;
 }
 
 #aboutIcons {
   text-align: center;
-  font-size: 3em;
   margin-bottom: 5%;
 }
 
-#aboutIcons i {
-  margin: 2%;
+#aboutIcons img {
+  width: 5em;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
+@media (min-width: 600px) {
+  #aboutIcons img {
+    width: 9em;
+  }
+}
 #portfolio {
-  background-color: #323537;
-  padding-top: 0.5%;
+  display: grid;
+  padding-top: 20%;
   color: #fff;
 }
 
-#rowOne {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-left: 9%;
-}
-
-#rowTwo {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-left: 9%;
-}
-
-.thumbnail {
-  width: 70%;
-  height: 35vh;
-  background-color: #fff;
+.item {
+  margin: 5% 0 20% 0;
+  text-align: center;
 }
 
 .title {
-  color: #fff;
+  color: #000;
+  margin-top: 2%;
+  text-align: left;
+  margin-left: 12%;
 }
 
 .number {
-  color: #ffbd71;
+  color: #5E7EA7;
   font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 2%;
+  text-align: left;
+  margin-left: 12%;
 }
 
+@media (min-width: 600px) {
+  #portfolio {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 #videoReel {
   display: grid;
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
-  padding-bottom: 10%;
+}
+
+i {
+  color: #A3B7D0;
+  font-size: 3em;
+  margin-left: 35%;
+  margin-top: 5%;
 }
 
 #contact {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding-top: 20%;
 }
 
 #contactLine {
-  grid-column: 1/3;
-  grid-row: 2/3;
+  margin-top: 2%;
 }
 
 #contactText {
-  grid-column: 1/2;
   grid-row: 3/4;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: 0% 20% 5% 20%;
 }
 
 #contactText p {
@@ -209,14 +303,13 @@ i {
 }
 
 #contactForm {
-  grid-column: 2/3;
-  grid-row: 3/4;
+  grid-row: 4/5;
   text-align: right;
-  margin-right: 20%;
+  margin: 0% 24% 5% 0;
 }
 
 label {
-  color: #ffbd71;
+  color: #5E7EA7;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
@@ -224,26 +317,54 @@ label {
 input, textarea {
   width: 70%;
   border: none;
-  background-color: #323537;
+  background-color: #A3B7D0;
   height: 3em;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
   border-radius: 0.2em;
   padding-left: 1%;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
 }
 
 textarea {
   height: 7em;
   border-radius: 0.2em;
+  color: #fff;
 }
 
 #submitBtn {
   width: 20%;
-  background-color: #ffbd71;
+  background-color: #5E7EA7;
   color: #fff;
   border-radius: 0.2em;
-  align-self: start;
+  margin-right: 25%;
 }
 
+@media (min-width: 600px) {
+  #contact {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #contactLine {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  #contactText {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  #contactText p {
+    padding-bottom: 10%;
+  }
+
+  #contactForm {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-right: 20%;
+  }
+}
 #copyright {
   text-align: center;
   margin: 2%;

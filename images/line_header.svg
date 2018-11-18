@@ -4,6 +4,19 @@
 	 viewBox="0 0 1360 301" style="enable-background:new 0 0 1360 301;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#5E7EA7;stroke-miterlimit:10;}
+
+	#line {
+	stroke-dasharray: 2000;
+	stroke-dashoffset: -2000;
+	animation: dash 5s linear forwards;
+	}
+
+	@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+	}
+
 </style>
 <path id="line" class="st0" d="M1363,196c-71.03-55.48-142.68-47.42-173.96-39.96c-10.85,2.59-22.28,0.07-30.96-6.92l-84.94-68.37
 	c-12.57-10.12-30.27-10.51-43.45-1.2c-22.07,15.6-64.94,31.34-136.24,3.79C779.66,39.37,778.14-6.86,640.02,10.93

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 h3, p, a {
   font-family: "Montserrat", sans-serif;
   color: #000;
@@ -19,7 +23,8 @@ h3, p, a {
 .hamburger div {
   position: relative;
   width: 75%;
-  height: 2px;
+  height: 3px;
+  border-radius: 7px;
   background-color: #5E7EA7;
   margin-top: 8px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -136,8 +141,9 @@ nav {
 
 .sectionHeading {
   width: 30%;
-  font-size: 1.5em;
+  font-size: 1.6em;
   margin-top: 5%;
+  margin-bottom: 5%;
   margin-left: 10%;
 }
 
@@ -164,7 +170,7 @@ nav {
   margin-left: 20%;
 }
 
-#name {
+#wordmark {
   color: #5E7EA7;
   font-size: 1.8em;
 }
@@ -180,7 +186,7 @@ nav {
 }
 
 @media (min-width: 600px) {
-  #name {
+  #wordmark {
     font-size: 2.8em;
   }
 
@@ -244,7 +250,7 @@ nav {
   }
 }
 #about {
-  padding-top: 20%;
+  padding-top: 10%;
 }
 
 #aboutText {
@@ -252,18 +258,32 @@ nav {
   margin: 0 auto;
   text-align: center;
   line-height: 20px;
-  padding-top: 5%;
 }
 
 #aboutIcons {
   text-align: center;
-  margin-bottom: 5%;
 }
 
-#aboutIcons img {
-  width: 5em;
-  margin-left: 4%;
-  margin-right: 4%;
+#aboutIcons i {
+  font-size: 3em;
+  margin: 8% 4%;
+  color: #A3B7D0;
+}
+
+#resume {
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2.5%;
+  background-color: #5E7EA7;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+#resume a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8em;
 }
 
 @media (min-width: 600px) {
@@ -271,22 +291,43 @@ nav {
     width: 9em;
   }
 }
+@media (min-width: 800px) {
+  #resume {
+    width: 10%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1%;
+    background-color: #5E7EA7;
+    border-radius: 0.2em;
+    cursor: pointer;
+  }
+
+  #resume a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8em;
+  }
+}
 #portfolio {
   display: grid;
-  padding-top: 20%;
+  padding-top: 10%;
   color: #fff;
 }
 
-.item {
-  margin: 5% 0 20% 0;
+#portfolioSelection {
+  margin: 0 auto;
   text-align: center;
+}
+
+.item {
+  padding: 5% 0 20% 0;
 }
 
 .title {
   color: #000;
   margin-top: 2%;
+  justify-items: start;
   text-align: left;
-  margin-left: 12%;
 }
 
 .number {
@@ -295,35 +336,82 @@ nav {
   font-size: 1.5em;
   margin-top: 2%;
   text-align: left;
-  margin-left: 12%;
 }
 
 @media (min-width: 600px) {
-  #portfolio {
+  #portfolioSelection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5em;
+  }
+
+  .title {
+    margin-left: 0%;
+  }
+
+  .number {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 800px) {
+  #portfolioSelection {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5em;
   }
 }
 #videoReel {
   display: grid;
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
-}
-
-i {
-  color: #A3B7D0;
-  font-size: 3em;
-  margin-left: 35%;
-  margin-top: 5%;
+  border: 1px outset #000;
+  border-radius: 4px;
 }
 
 .controls {
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
+  text-align: center;
 }
 
+.controls button {
+  border: none;
+  outline: none;
+}
+
+i {
+  color: #5E7EA7;
+  font-size: 3em;
+  text-align: center;
+}
+
+#volControl {
+  margin-top: 5%;
+  height: 2em;
+  vertical-align: end;
+}
+
+@media (min-width: 600px) {
+  #videoReel {
+    width: 80%;
+  }
+
+  .controls {
+    width: 80%;
+  }
+}
+@media (min-width: 800px) {
+  #videoReel {
+    width: 70%;
+  }
+
+  .controls {
+    width: 70%;
+  }
+}
 #contact {
   display: grid;
-  padding-top: 20%;
+  padding-top: 10%;
 }
 
 #contactLine {
@@ -346,6 +434,7 @@ i {
 }
 
 label {
+  vertical-align: top;
   color: #5E7EA7;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -364,6 +453,7 @@ input, textarea {
 }
 
 textarea {
+  vertical-align: top;
   height: 7em;
   border-radius: 0.2em;
   color: #fff;
@@ -405,6 +495,44 @@ textarea {
 #copyright {
   text-align: center;
   margin: 2%;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  opacity: 0.98;
+}
+
+.lightbox img {
+  position: relative;
+  background-color: #fff;
+  left: 40px;
+  width: 80%;
+}
+
+.closeLightbox {
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+
+.closeLightbox:hover,
+.closeLightbox:focus {
+  color: #A3B7D0;
+  text-decoration: none;
+}
+
+.show-lightbox {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

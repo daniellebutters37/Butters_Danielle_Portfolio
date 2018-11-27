@@ -1,76 +1,127 @@
 (() => {
-    //fetching data with ajax and vue.js
-        const vm = new Vue({
-            el : "#app",
-            data : {
-                projectThumbnail : "",
-                projectName : "",
-                projectNumber : "",
-            },
+    
+//fetching data with ajax and vue.js
+    const vm = new Vue({
+        el : "#app",
+        data : {
+            projectDataAll: "",
+            lightBox : [],
+        },
 
-            mounted : function() {
-                this.fetchData();
-            },
+        mounted : function() {
+            this.fetchData();
+        },
 
-            methods : {
-                fetchData() {
-                    // debugger;
-                    //lset targetURL = e.currentTarget.id;
+        methods : {
+            fetchData() {
+                // debugger;
                     
-                    fetch(`./includes/connect.php`) //fetching data
-                    .then(res => res.json()) // parsing the data
-                    .then(data => {
-                        console.log(data);
-                        const {project_thumbnail, project_name, project_number} = data[0];
+                fetch(`./includes/data.php`) //fetching data
+                .then(res => res.json()) // parsing the data
+                .then(data => {
+                    this.projectDataAll = data;
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+            },
 
-                        this.projectThumbnail  = project_thumbnail ;
-                        this.projectName = project_name;
-                        this.projectNumber = project_number;
-                    })
-                    .catch(function(error) {
-                        console.log(error);
-                    });
-                }
+            lightBoxProject(project) {
+                this.lightBox = project;
             }
-        });
+        }
+    });
 
-})();
+//----------------------MENU
 
+//Variables
+var menuSelection = document.querySelectorAll('.menuSelection'),
+    checkbox = document.querySelector('#toggle');
 
+//Functions
+function closeMenu(){
+    menuSelection[i] = checkbox.checked=false;
+}
 
+//Event listener
+for(var i = 0; i < menuSelection.length; i++) {
+	menuSelection[i].addEventListener('click', closeMenu, false);
+}
 
+//----------------------LIGHTBOX
 
-//variables
+// Variables
 var lightbox = document.querySelector('.lightbox'),
 	closeLightB = document.querySelector('.closeLightbox'),
-	galleryThumb = document.querySelectorAll('.galleryThumb'),
-	mainphoto = document.querySelector('#portfolioImage'),
-	imageDesc = document.querySelector('#imageDesc'),
-	count = 0;
+	portfolioThumb = document.querySelectorAll('.thumbnail');
+
+//Functions
+function openLBox(){
+    lightbox.classList.replace('lightbox','show-lightbox');
+}
+
+function closeLBox(){
+    lightbox.classList.remove('show-lightbox', 'lightbox');
+}
+
+//Event listeners
+
+for(var i = 0; i < portfolioThumb.length; i++) {
+	portfolioThumb[i].addEventListener('click', openLBox, false);
+}
+
+// portfolioThumb.addEventListener('click', openLBox, false);
+closeLightB.addEventListener('click', closeLBox, false);
 
 
+//----------------------VIDEO PLAYER
 
-// LIGHTBOX    
-//functions
+//VARIABLES
 
-// function openLBox(){
-// 	lightbox.classList.add('show-lightbox');
-// }
+var reel = document.querySelector("video"),
+    volumeControl = document.querySelector("#volControl"),
+    video = document.querySelector("#videoReel"),
+    muteVideo = document.querySelector("#volMute"),
+    muteBtn = document.querySelector("#muteBtn"),
+    pPlay = document.querySelector("#pPlay"),
+    pPlayBtn = document.querySelector("#pPlayBtn");
 
-// function closeLbox(){
-//   lightbox.classList.remove('show-lightbox');
-// }
+//Trailers Functions
 
-// function showPortfolioImage(){
-// 	mainphoto.src = this.querySelector('img').src.replace('/thumbs','');
-// 	imageDesc.innerHTML = this.querySelector('.projectDesc').innerHTML;
-// 	lightbox.classList.add('show-lightbox');
-// }
+function changeVol () {
+    if(volumeControl.value == 1){
+        video.muted = true;
+    } else {
+        video.volume = (volumeControl.value/100);
+        video.muted = false;
+    }
+	// video.volume = volumeControl.value / 100; 
+	// console.log(volumeControl.value);
+ }
 
-// //event listeners
+function muteVid() {
+    // reel.volume = 0;
+    if (reel.volume = 0) {
+        muteBtn.classList.replace('fa-volume-mute', 'fa-volume-up');
+    } else {
+        muteBtn.classList.replace('fa-volume-up', 'fa-volume-mute');
+    }
+}
 
-// for(var i = 0; i < galleryThumb.length; i++) {
-// 	galleryThumb[i].addEventListener('click', showPortfolioImage, false);
-// }
+function pausePlay() {
+		if (reel.paused) {
+			reel.play();
+            pPlayBtn.classList.replace( 'fa-play-circle', 'fa-pause-circle' );
+		} else {
+			reel.pause();
+            pPlayBtn.classList.replace( 'fa-pause-circle', 'fa-play-circle' );
+		}
+}
 
-// closeLightB.addEventListener('click', closeLbox, false);
+// Reel Event Listeners
+
+muteVideo.addEventListener("click", muteVid, false);
+pPlay.addEventListener("click", pausePlay, false);
+volumeControl.addEventListener("mouseup", changeVol, false);
+
+})();

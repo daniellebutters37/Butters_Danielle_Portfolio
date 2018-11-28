@@ -159,7 +159,7 @@ nav {
 //----------------------------------Header Section Styles
 .sectionHeading {
     width: 30%;
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 10%;
@@ -190,13 +190,13 @@ nav {
   
 #wordmark {
     color: $dark-color;
-    font-size: 1.8em;
+    font-size: 2em;
 }
   
 .role {
     padding-top: 2%;
     line-height: 1.2em;
-    font-size: 0.5em;
+    font-size: 0.9em;
 }
 
 #scroll {
@@ -273,7 +273,7 @@ nav {
 //----------------------------------About Section Styles
 
 #about {
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 #aboutText {
@@ -281,20 +281,20 @@ nav {
     margin: 0 auto;
     text-align: center;
     line-height: 20px;
+    margin-bottom: 4%;
 }
 
-#aboutIcons{
+#skillsIcons{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    width: 80%;
     text-align: center;
-}
-
-#aboutIcons i {
-    font-size: 3em;
-    margin: 8% 4%;
-    color: $light-color;
+    margin-bottom: 4%;
 }
 
 #resume {
-    width: 20%;
+    width: 25%;
     text-align: center;
     margin: 0 auto;
     padding: 2.5%; 
@@ -310,17 +310,39 @@ nav {
 }
 
 @media (min-width: 600px){
-    #aboutIcons img {
-        width: 9em;
-    } 
+    #skillsIcons{
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        width: 80%;
+    }
+
+    #resume {
+        width: 15%;
+        padding: 2%; 
+    }
+    
 }
 
 @media (min-width: 800px){
+    #skillsIcons{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 4%;
+    }
+    
+    .icon {
+        width: 50%;
+        margin:1%;
+    }
+
     #resume {
-        width: 10%;
+        width: 12%;
         text-align: center;
         margin: 0 auto;
-        padding: 1%; 
+        padding: 1.5%; 
         background-color: $dark-color;
         border-radius:0.2em;
         cursor: pointer;
@@ -397,7 +419,6 @@ nav {
     display: grid;
     width: 90%;
     margin: 0 auto;
-    border: 1px outset #000;
     border-radius: 4px;
 }
 

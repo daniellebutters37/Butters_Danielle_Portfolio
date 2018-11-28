@@ -3,18 +3,22 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1360 156.2" style="enable-background:new 0 0 1360 156.2;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#5E7EA7;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#455a72;stroke-miterlimit:10;}
 
 	#line {
-	stroke-dasharray: 2000;
-	stroke-dashoffset: 2000;
-	animation: dash 5s linear forwards;
+		stroke-dasharray: 2000;
+		stroke-dashoffset: 2000;
+		-webkit-animation: dash 5s linear forwards;
+		animation: dash 5s infinite linear forwards;
 	}
 
 	@keyframes dash {
-	to {
-		stroke-dashoffset: 0;
-	}
+		40% {
+			stroke-dashoffset: 0;
+		}
+		100%{
+			stroke-dashoffset: 0;
+		}
 	}
 
 </style>

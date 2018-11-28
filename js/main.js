@@ -28,6 +28,7 @@
 
             lightBoxProject(project) {
                 this.lightBox = project;
+                openLBox();
             }
         }
     });
@@ -57,19 +58,14 @@ var lightbox = document.querySelector('.lightbox'),
 
 //Functions
 function openLBox(){
-    lightbox.classList.replace('lightbox','show-lightbox');
+    lightbox.classList.add('show-lightbox');
 }
 
 function closeLBox(){
-    lightbox.classList.remove('show-lightbox', 'lightbox');
+    lightbox.classList.remove('show-lightbox');
 }
 
 //Event listeners
-
-for(var i = 0; i < portfolioThumb.length; i++) {
-	portfolioThumb[i].addEventListener('click', openLBox, false);
-}
-
 // portfolioThumb.addEventListener('click', openLBox, false);
 closeLightB.addEventListener('click', closeLBox, false);
 

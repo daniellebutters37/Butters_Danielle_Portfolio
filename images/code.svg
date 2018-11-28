@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="code" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 205.8 208.8" style="enable-background:new 0 0 205.8 208.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F0F3F5;}
+	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
+
+	#outline {
+		stroke-dasharray: 900;
+		stroke-dashoffset: -900;
+		-webkit-animation: dash 7s linear forwards;
+		animation: dash 7s infinite linear forwards;
+	}
+
+	@keyframes dash {
+		50% {
+			stroke-dashoffset: 0;
+		}
+		100%{
+			stroke-dashoffset: 0;
+		}
+	}
+</style>
+<path id="color" class="st0" d="M37.4,59l124.1,7.2c11.2,0.6,19.9,9.9,19.9,21.1v50.5c0,11.2-8.7,20.4-19.8,21.1l-128,8.2
+	c-12.7,0.8-23.2-9.7-22.5-22.4l4-65.9C15.8,67.2,25.8,58.3,37.4,59z"/>
+<g id="lines">
+	<path id="outline" class="st1" d="M194.9,58.6v111.9c0,4.6-3.8,8.4-8.4,8.4H33.2c-4.6,0-8.4-3.8-8.4-8.4V39.8c0-4.6,3.8-8.4,8.4-8.4h153.3
+		c4.6,0,8.4,3.8,8.4,8.4v7.7c0,4.6-3.8,8.4-8.4,8.4H31.8"/>
+	<line class="st1" x1="123.7" y1="73.7" x2="92.1" y2="150.1"/>
+	<polyline class="st1" points="141.5,92.2 166.2,106.7 141.5,120.3 	"/>
+	<polyline class="st1" points="80.4,120.3 55.7,105.8 80.4,92.2 	"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

@@ -71,7 +71,7 @@ $fields = array(
 
         <object id="lineHeader" data="images/line_header.svg" type="image/svg+xml"></object>
 
-        <div id="scroll" class="wow fadeIn pulse" data-wow-delay="3s" data-wow-iteration="infinite">
+        <div id="scroll" class="wow pulse" data-wow-delay="3s" data-wow-iteration="infinite">
             <p>scroll</p>
             <i class="fas fa-chevron-down"></i>
         </div>
@@ -83,6 +83,21 @@ $fields = array(
     <h2 class="hidden">About Section</h2>
     <p class="wow fadeInUp sectionHeading" data-wow-duration="3s">about</p>
 
+    <div id="skillsIcons" class="wow fadeInUp" data-wow-duration="2s">
+        <div>
+            <object class="icon" data="images/paint_can.svg" type="image/svg+xml"></object>
+            <p>design</p>
+        </div>
+        <div>
+            <object class="icon" data="images/code.svg" type="image/svg+xml"></object>
+            <p>coding</p>
+        </div>
+        <div>
+            <object class="icon" data="images/thumb_print.svg" type="image/svg+xml"></object>
+            <p>branding</p>
+        </div>
+    </div>
+
     <p id="aboutText" class="wow fadeInUp" data-wow-duration="2s">
     At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
     voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati 
@@ -90,12 +105,6 @@ $fields = array(
     est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam 
     libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
     maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
-
-    <div id="aboutIcons">
-        <i class="fas fa-paint-roller wow fadeInUp" data-wow-duration="2s"></i>
-        <i class="fas fa-code wow fadeInUp" data-wow-duration="2s"></i>
-        <i class="fas fa-camera-retro wow fadeInUp" data-wow-duration="2s"></i>
-    </div>
 
     <div id="resume" class="wow fadeInUp" data-wow-duration="2s"><a href="images/wish_list.pdf" download="myfile.pdf" target="_blank">Resume</a></div>
 
@@ -164,18 +173,7 @@ $fields = array(
             <label for="<?php echo $field_name;?>"><?php echo $field_config['label'];?></label>
             <input id="<?php echo $field_name;?>" placeholder="<?php echo $field_name;?>" type="<?php echo $field_config['type'];?>" name="<?php echo $field_name;?>"><br>
         <?php endif;?>
-        <!-- <label>01</label>
-        <input type="text" name="fullname" id="fullName" placeholder="name" required><br>
-    
-        <label>02</label>
-        <input type="email" name="email" id="email" placeholder="email"required><br>
-        
-        <label>03</label>
-        <input type="phone" name="phone" id="phone" placeholder="phone" required><br>
-        
-        <label>04</label>
-        <textarea name="message" id="message" placeholder="message" required></textarea><br> -->
-        <?php endforeach;?>
+    <?php endforeach;?>
         <input type="submit" value="send" id="submitBtn">
     </form> 
     </div>

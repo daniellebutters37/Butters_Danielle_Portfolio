@@ -1,0 +1,47 @@
+<svg id="mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.5 140.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a3b7d0;
+      }
+
+      .cls-2 {
+        fill: #f0f3f5;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+    .cls-3 {
+		stroke-dasharray: 350;
+		stroke-dashoffset: -350;
+		-webkit-animation: dash 5s linear forwards;
+		animation: dash 5s infinite linear forwards;
+	}
+
+	@keyframes dash {
+		50% {
+			stroke-dashoffset: 0;
+		}
+		100%{
+			stroke-dashoffset: 0;
+		}
+	}
+
+
+    </style>
+  </defs>
+  <title>location</title>
+  <g id="color">
+    <ellipse class="cls-1" cx="57" cy="128" rx="56.5" ry="12.5"/>
+    <path class="cls-2" d="M121.22,55.56c-18.29-11.72-44.07,0-44.3,19.84-.07,6,1.7,11.84,7.21,16,16.24,12.14,20.88-3,30.16-11.13S129.37,67.08,125.89,60A12.85,12.85,0,0,0,121.22,55.56Z" transform="translate(-53.92 -27.9)"/>
+  </g>
+  <g id="lines">
+    <path class="cls-3" d="M102.42,149.4s42-53,42-80-22-41-41-41-43,13-43,42S102.42,149.4,102.42,149.4Z" transform="translate(-53.92 -27.9)"/>
+    <path class="cls-3" d="M79.42,138.4s-25,5-25,13,30,15,48,15,49-5,49-14-25-14-25-14" transform="translate(-53.92 -27.9)"/>
+    <circle class="cls-3" cx="49" cy="44" r="19.5"/>
+  </g>
+</svg>

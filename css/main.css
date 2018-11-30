@@ -11,13 +11,20 @@ h3, p, a {
   display: none;
 }
 
+@media (min-width: 800px) {
+  .wrapper {
+    display: grid;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
 .hamburger {
   position: fixed;
   width: 50px;
   height: 45px;
   top: 20px;
   right: 20px;
-  z-index: 3;
+  z-index: 2;
 }
 
 .hamburger div {
@@ -58,7 +65,7 @@ h3, p, a {
 
 .nav {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -147,9 +154,8 @@ nav {
   margin-left: 10%;
 }
 
-#header {
+#headingContent {
   display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 #face {
@@ -161,7 +167,7 @@ nav {
 
 #lineHeader {
   position: absolute;
-  top: 28%;
+  top: 35%;
 }
 
 #intro {
@@ -183,6 +189,7 @@ nav {
 
 #scroll {
   display: none;
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {
@@ -192,6 +199,11 @@ nav {
 
   .role {
     font-size: 1.5em;
+  }
+
+  #headingContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   #face {
@@ -216,6 +228,11 @@ nav {
 @media (min-width: 800px) {
   #header {
     margin: 0 auto;
+  }
+
+  #headingContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   #face {
@@ -250,7 +267,7 @@ nav {
   }
 }
 #about {
-  padding-top: 5%;
+  padding-top: 10%;
 }
 
 #aboutText {
@@ -258,7 +275,8 @@ nav {
   margin: 0 auto;
   text-align: center;
   line-height: 20px;
-  margin-bottom: 4%;
+  margin-bottom: 10%;
+  margin-top: 10%;
 }
 
 #skillsIcons {
@@ -278,6 +296,7 @@ nav {
   background-color: #455a72;
   border-radius: 0.2em;
   cursor: pointer;
+  margin-bottom: 5%;
 }
 
 #resume a {
@@ -308,6 +327,11 @@ nav {
     margin-bottom: 4%;
   }
 
+  #aboutText {
+    margin-bottom: 5%;
+    margin-top: 3%;
+  }
+
   .icon {
     width: 50%;
     margin: 1%;
@@ -321,6 +345,14 @@ nav {
     background-color: #455a72;
     border-radius: 0.2em;
     cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+
+  #resume:hover {
+    transform: scale(1.1);
   }
 
   #resume a {
@@ -330,7 +362,6 @@ nav {
   }
 }
 #portfolio {
-  display: grid;
   padding-top: 10%;
   color: #fff;
 }
@@ -341,7 +372,18 @@ nav {
 }
 
 .item {
-  padding: 5% 0 20% 0;
+  width: 260px;
+  margin: 0 auto;
+  padding: 5% 0% 20% 0%;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.item img:hover {
+  transform: scale(1.01);
 }
 
 .title {
@@ -363,22 +405,19 @@ nav {
   #portfolioSelection {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1.5em;
-  }
-
-  .title {
-    margin-left: 0%;
-  }
-
-  .number {
-    margin-left: 0%;
+    grid-gap: 2em;
+    width: 75%;
   }
 }
 @media (min-width: 800px) {
   #portfolioSelection {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1.5em;
+    grid-gap: 2em;
+  }
+
+  .item {
+    margin: 5% 0% 20% 0%;
   }
 }
 #videoReel {
@@ -430,7 +469,6 @@ i {
   }
 }
 #contact {
-  display: grid;
   padding-top: 10%;
 }
 
@@ -438,9 +476,25 @@ i {
   margin-top: 2%;
 }
 
+#contactFormSection {
+  display: grid;
+}
+
 #contactText {
   grid-row: 3/4;
   margin: 0% 20% 5% 20%;
+}
+
+#location {
+  width: 20%;
+  float: left;
+  margin-left: 18%;
+}
+
+#london {
+  float: right;
+  margin-right: 28%;
+  margin-top: 9%;
 }
 
 #contactText p {
@@ -450,7 +504,7 @@ i {
 #contactForm {
   grid-row: 4/5;
   text-align: right;
-  margin: 0% 24% 5% 0;
+  margin: 5% 24% 5% 0;
 }
 
 label {
@@ -486,10 +540,20 @@ textarea {
   color: #fff;
   border-radius: 0.2em;
   margin-right: 25%;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+#submitBtn:hover {
+  transform: scale(1.05);
 }
 
 @media (min-width: 600px) {
-  #contact {
+  #contactFormSection {
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -513,14 +577,29 @@ textarea {
     margin-right: 20%;
   }
 }
+@media (min-width: 800px) {
+  #contactForm {
+    padding-right: 5%;
+  }
+
+  #contactText {
+    padding-left: 5%;
+  }
+
+  #contactForm {
+    margin: 0% 24% 5% 0;
+  }
+}
 #copyright {
   text-align: center;
   margin: 2%;
 }
 
 .lightbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   position: fixed;
-  z-index: 10;
+  z-index: 500;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -530,6 +609,7 @@ textarea {
   background-color: #fff;
   pointer-events: none;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.5s;
 }
 
@@ -558,13 +638,47 @@ textarea {
   pointer-events: auto;
 }
 
-#portfolioImage {
-  width: 300px;
+#lineLightbox {
+  position: absolute;
+  top: 4%;
+  z-index: -5;
+}
+
+#lightboxText {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  margin-top: 6%;
+}
+
+#imageNum {
+  color: #455a72;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: right;
+}
+
+#imageName {
+  font-size: 2em;
+  text-align: right;
+}
+
+.lightboxTitle {
+  text-align: end;
+  font-size: 1.6em;
+  margin-top: 3%;
+  margin-bottom: 1%;
 }
 
 #imageDesc {
-  color: #000;
-  margin: 5%;
+  width: 60%;
+  text-align: right;
+  margin-left: 40%;
+}
+
+#portfolioImage {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  margin-top: 6.5%;
 }
 
 /*# sourceMappingURL=main.css.map */

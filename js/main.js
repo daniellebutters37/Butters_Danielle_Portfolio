@@ -35,28 +35,28 @@
 
 //----------------------MENU
 
-//Variables
+//Menu Variables
 var menuSelection = document.querySelectorAll('.menuSelection'),
     checkbox = document.querySelector('#toggle');
 
-//Functions
+//Menu Functions
 function closeMenu(){
     menuSelection[i] = checkbox.checked=false;
 }
 
-//Event listener
+//Menu Event listener
 for(var i = 0; i < menuSelection.length; i++) {
 	menuSelection[i].addEventListener('click', closeMenu, false);
 }
 
 //----------------------LIGHTBOX
 
-// Variables
+//Lightbox Variables
 var lightbox = document.querySelector('.lightbox'),
 	closeLightB = document.querySelector('.closeLightbox'),
 	portfolioThumb = document.querySelectorAll('.thumbnail');
 
-//Functions
+//Lightbox Functions
 function openLBox(){
     lightbox.classList.add('show-lightbox');
 }
@@ -65,14 +65,14 @@ function closeLBox(){
     lightbox.classList.remove('show-lightbox');
 }
 
-//Event listeners
+//Lightbox Event listeners
 // portfolioThumb.addEventListener('click', openLBox, false);
 closeLightB.addEventListener('click', closeLBox, false);
 
 
 //----------------------VIDEO PLAYER
 
-//VARIABLES
+//Reel Variables
 
 var reel = document.querySelector("video"),
     volumeControl = document.querySelector("#volControl"),
@@ -82,7 +82,7 @@ var reel = document.querySelector("video"),
     pPlay = document.querySelector("#pPlay"),
     pPlayBtn = document.querySelector("#pPlayBtn");
 
-//Trailers Functions
+//Reel Functions
 
 function changeVol () {
     if(volumeControl.value == 1){
@@ -119,5 +119,27 @@ function pausePlay() {
 muteVideo.addEventListener("click", muteVid, false);
 pPlay.addEventListener("click", pausePlay, false);
 volumeControl.addEventListener("mouseup", changeVol, false);
+
+
+//----------------------SCROLL
+// Scroll Variables
+var scrollBtn = document.querySelector('#scroll');
+  
+//Scroll Functions
+function scrollDown() {
+    var windowScroll = document.documentElement.clientHeight;
+    (function scroll() {
+        if (window.pageYOffset < windowScroll) {
+          window.scrollBy(0, 50);
+          setTimeout(scroll, 50);
+        }
+        if (window.pageYOffset > windowScroll) {
+          window.scrollTo(0);
+        }
+    })();
+}
+
+// Scroll Event Listeners
+scrollBtn.addEventListener('click', scrollDown);
 
 })();

@@ -6,8 +6,12 @@
 
 
 //----------------------------------General
-html{
-    scroll-behavior: smooth;
+// html{
+//     scroll-behavior: smooth;
+// }
+
+body {
+    overflow-x: hidden;
 }
 
 h3, p, a {
@@ -95,7 +99,6 @@ h3, p, a {
   
 .nav .navWrapper {
     position: relative;
-    overflow-y: auto;
     height: 100vh;
 }
   
@@ -385,7 +388,7 @@ nav {
     #resume a {
         text-decoration: none;
         color: $white;
-        font-size: 0.8em;
+        font-size: 1em;
     }
 }
 
@@ -465,28 +468,62 @@ nav {
 }
 
 .controls {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
+    margin-top:1%;
 }
 
 .controls button {
     border:none;
     outline: none;
+    background-color: $white;
 }
 
 i {
     color: $dark-color;
-    font-size: 3em;
-    text-align: center;
+    font-size: 2.5em;
+    margin-top:5%;
 }
 
 #volControl {
-    margin-top:5%;
-    height: 2em;
-    vertical-align: end;
+    width: 20%;
+    vertical-align: top;
+    margin-top:14px;
 }
 
+#seekSlider {
+    width: 35%;
+    vertical-align: top;
+    margin-top:14px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;   
+    background: $light-color;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; 
+    background: $dark-color;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: $dark-color;
+    cursor: pointer;
+}
 
 @media (min-width: 600px){
     #videoReel {
@@ -495,6 +532,18 @@ i {
 
     .controls {
         width: 80%;
+    }
+    #seekSlider {
+        width: 50%;
+        margin-top:18px;
+    }
+
+    #volControl {
+        margin-top:18px;
+    }
+
+    i {
+        font-size: 3em;
     }
 }
 
@@ -536,7 +585,7 @@ i {
 
 #london {
     float:right;
-    margin-right:28%;
+    margin-right: 20%;
     margin-top: 9%;
 }
 
@@ -562,27 +611,25 @@ input, textarea {
     width: 70%;
     border: none;
     background-color: $light-color;
-    height: 3em;
+    height: 2em;
     margin-bottom: 5%;
     border-radius:0.2em;
-    padding-left: 1%;
-    color: $black;
     font-family: $main-font;
+    font-size: 1em;
 }
 
 textarea {
     vertical-align: top;
     height: 7em;
     border-radius:0.2em;
-    color: $white;
 }
 
 #submitBtn {
-    width: 20%;
+    width: 40%;
     background-color: $dark-color;
     color: $white;
     border-radius:0.2em;
-    margin-right: 25%;
+    margin-right: 15%;
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
@@ -634,6 +681,10 @@ textarea {
      #contactForm {
         margin: 0% 24% 5% 0;
     }
+
+    #london {
+        margin-right: 28%;
+    }
 }
 
 //---------------------------------- Footer Section Styles
@@ -647,10 +698,10 @@ textarea {
 //---------------------------------- Lightbox Styles
 .lightbox {
     display:grid;
-    grid-template-columns: 1fr 1fr;
     position: fixed;
     z-index: 500;
     padding-top: 100px;
+    padding-bottom: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -661,22 +712,11 @@ textarea {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s;
-  }
-  
-.lightbox img {
-    position: relative;
-    background-color: $white;
-    left: 40px;
-    width: 40%;
+    height: 75vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
 }
-  
-.closeLightbox {
-    color: $white;
-    position: absolute;
-    top: 20px;
-    right: 25px;
-}
-  
+
 .closeLightbox:hover,
 .closeLightbox:focus {
     color: $light-color;
@@ -687,6 +727,13 @@ textarea {
     opacity: 0.98;
     pointer-events: auto;
 }
+  
+.closeLightbox {
+    color: $white;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
 
 #lineLightbox {
     position: absolute;
@@ -694,10 +741,20 @@ textarea {
     z-index: -5;
 }
 
+#portfolioImage {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 70%;
+    margin: 0 auto;
+    margin-left:15%;
+}
+
 #lightboxText {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    margin-top:6%;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top:10%;
+    margin: 0 auto;
+    width:70%;
 }
   
 #imageNum {
@@ -710,24 +767,104 @@ textarea {
 #imageName {
     font-size: 2em;
     text-align:right;
+}
 
+#imageRole {
+    text-align:right;
 }
 
 .lightboxTitle {
     text-align:end;
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin-top: 3%;
     margin-bottom: 1%;
 }
 
 #imageDesc {
-    width: 60%;
     text-align:right;
-    margin-left:40%;
 }
 
-#portfolioImage {
-    grid-column: 2/3;
-    grid-row: 1/4;
-    margin-top:6.5%;
+@media (min-width: 600px) {
+    .lightbox {
+        height: 100%;
+    }
+
+    .wLightbox {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 8%;
+    }
+
+    #lightboxText {
+        grid-column: 1/2;
+        grid-row: 1/4;
+        width: 80%;
+    }
+
+    #portfolioImage {
+        grid-column: 2/3;
+        grid-row: 1/4;
+        width: 80%;
+        margin-left: 0%;
+        margin-right: 20%;
+    }
+      
+    #imageNum {
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 800px) {
+    .lightbox {
+        height: 75vh;
+    }
+
+    #lightboxText {
+        grid-column: 1/2;
+        grid-row: 1/4;
+        width: 80%;
+        margin-right:10%;
+    }
+
+    #portfolioImage {
+        grid-column: 2/3;
+        grid-row: 1/4;
+        float:left;
+    }
+
+    .lightbox img {
+        position: relative;
+        background-color: $white;
+        width: 80%;
+        margin-top:13%;
+        margin-right:20%;
+    }
+      
+    #imageNum {
+        color: $dark-color;
+        font-size: 2em;
+        font-weight: bold;
+        text-align:right;
+    }
+    
+    #imageName {
+        font-size: 2em;
+        text-align:right;
+    }
+    
+    #imageRole {
+        text-align:right;
+    }
+    
+    .lightboxTitle {
+        text-align:end;
+        font-size: 1.6em;
+        margin-top: 3%;
+        margin-bottom: 1%;
+    }
+    
+    #imageDesc {
+        text-align:right;
+    }
+    
 }

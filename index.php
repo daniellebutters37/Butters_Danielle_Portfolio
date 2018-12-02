@@ -108,7 +108,7 @@ $fields = array(
         libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
         maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
 
-        <div id="resume" class="wow fadeInUp" data-wow-duration="2s"><a href="images/wish_list.pdf" download="myfile.pdf" target="_blank">Resume</a></div>
+        <div id="resume" class="wow fadeInUp" data-wow-duration="2s"><a href="documents/d_butters_resume.pdf" download="d_butters_resume.pdf" target="_blank">Resume</a></div>
     </div>
     <object id="lineAbout" class="wow fadeInUp" data-wow-duration="2s" data="images/line_about.svg" type="image/svg+xml"></object>
 
@@ -133,23 +133,22 @@ $fields = array(
     <object id="linePortfolio" class="wow fadeInUp" data-wow-duration="2s" data="images/line_portfolio.svg" type="image/svg+xml"></object>
 </section>
 
-
 <section id="video" class="wow fadeInUp wrapper" data-wow-duration="2s">
     <!-- Video -->
     <video id="videoReel">
-        <source src="'video/video_reel.mp4" type="video/mp4"/>
+        <source src="video/video_reel.mp4" type="video/mp4"/>
         <source src="video/video_reel.webm" type="video/webm"/>
-        <source src="video/video_reel.ogv" type="video/ogg"/>
+        <source src="video/video_reel.ogg" type="video/ogg"/>
     </video>
 
     <!-- Video Controls and Buttons -->
     <div class="controls hideMe">
         <Button id="pPlay"><i id="pPlayBtn" class="far fa-play-circle"></i></button>
-        <input id="volControl" type="range" min="0" max="100" step="1">
-        <button id="volMute"><i id="muteBtn" class="fas fa-volume-mute"></i></button>
+        <input id="seekSlider" class="slider" type="range" min="0" max="100" value="0" step="1">
+        <button id="volMute"><i id="muteBtn" class="fas fa-volume-up"></i></button>
+        <input id="volControl" class="slider" type="range" min="0" max="100" step="1">
     </div>
 </section>
-
 
 <section id="contact">
     <h2 class="hidden">Contact Section</h2>
@@ -184,7 +183,6 @@ $fields = array(
     </div>
 </section>
 
-
 <footer id="footer">
     <h2 class="hidden">Footer</h2>
         <p id="copyright">&copy; danielle butters 2018</p>
@@ -195,13 +193,14 @@ $fields = array(
     <h2 class="hidden">LightBox</h2>
             <span class="closeLightbox"><i class="fas fa-times"></i></span>
             <object id="lineLightbox" data="images/line_header.svg" type="image/svg+xml"></object>
+        <div class="wrapper wLightbox">
             <img :src="'images/'+ lightBox['project_image']"  id="portfolioImage" :alt="lightBox['project_name']">
             <div id="lightboxText">
                 <h3 id="imageNum">{{ lightBox['project_number'] }}</h3><br>
                 <h3 id="imageName">{{ lightBox['project_name'] }}</h3><br>
 
                 <h3 class="lightboxTitle">roles</h3>
-                <p id="imageRole">{{ lightBox['project_role'] }}</p>
+                <p id="imageRole">{{ lightBox['project_roles'] }}</p>
             
                 <h3 class="lightboxTitle">objective</h3>
                 <p id="imageDesc">{{ lightBox['project_objective'] }}</p>
@@ -209,6 +208,7 @@ $fields = array(
                 <h3 class="lightboxTitle">results</h3>
                 <p id="imageDesc">{{ lightBox['project_result'] }}</p>
             </div>
+        </div>
 </section>
 
 </main>

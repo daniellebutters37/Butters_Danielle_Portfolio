@@ -8,7 +8,7 @@
 
 	#outline {
 		stroke-dasharray: 900;
-		stroke-dashoffset: -900;
+		stroke-dashoffset: 900;
 		-webkit-animation: dash 7s linear forwards;
 		animation: dash 7s infinite linear forwards;
 	}

@@ -22,7 +22,7 @@
                     this.projectDataAll = data;
                 })
                 .catch(function(error) {
-                    console.log(error);
+                    // console.log(error);
                 });
             },
 
@@ -150,12 +150,10 @@ function scrollDown() {
     var windowScroll = document.documentElement.clientHeight;
     (function scroll() {
         if (window.pageYOffset < windowScroll) {
-          window.scrollBy(0, 50);
-          setTimeout(scroll, 50);
+          window.scrollBy(0, 30);
+          setTimeout(scroll, 30);
         }
-        if (window.pageYOffset > windowScroll) {
-          window.scrollTo(0);
-        }
+
     })();
 }
 

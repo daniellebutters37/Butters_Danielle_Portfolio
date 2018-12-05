@@ -1,28 +1,28 @@
 # Portfolio Website: Danielle Butters
 
 **Motivation**
-This project aims to create a dynamic portfolio website to showcase my work throughtout the semester.
-
-**Tech/framework used**
-No Framework used.
+This project aims to create a dynamic portfolio website to showcase my projects.
 
 **Design**
-Cinema 4D
-After Effects
-Illustrator/Photoshop
+Cinema 4D R19
+Adobe After Effects
+Adobe Illustrator/Photoshop
 
 **Build**
-SASS plug-in for Visual Studio Code to compile CSS
+Vue.js - Javascript framework
+Sass - CSS complier
+AJAX - Front-end technology for handeling data requests
+WOW.js - scroll animation Library
 
-**Code Example**
+**API Reference**
+Font Awsome - Icons
+Google Fonts - Montserrat 
 
 **Installation**
+Node.js
 SASS
 Gulp
 Npm
-
-**API Reference** 
-fonts.googleapis.com 
 
 **Tests**
 W3C Validator - Valid and semantic HTML tagging

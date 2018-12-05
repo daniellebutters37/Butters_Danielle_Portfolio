@@ -7,14 +7,14 @@
 
 		#Nose, #Hair {
 		stroke-dasharray: 1000;
-		stroke-dashoffset: -1000;
+		stroke-dashoffset: 1000;
 		-webkit-animation: dash 3s linear forwards;
 		animation: dash 3s linear forwards;
 		}
 
 		#Lips, #Eye {
 		stroke-dasharray: 2000;
-		stroke-dashoffset: -2000;
+		stroke-dashoffset: 2000;
 		-webkit-animation: dash 5s linear forwards;
 		animation: dash 5s linear forwards;
 		}

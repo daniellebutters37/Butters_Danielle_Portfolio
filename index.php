@@ -114,7 +114,7 @@ $fields = array(
 
         <p id="aboutText" class="wow fadeInUp" data-wow-duration="2s">
         I aspire to combine beautiful design with a technical proficiency that leads to quality results.  
-        Meaningful and innovative design motive me to go beyond expectations. The combination of design, 
+        Meaningful and innovative design motivate me to go beyond expectations. The combination of design, 
         branding and web development give limitless opportunities for creation. When I am not immersed in 
         the world of web and design I am a fanatic reader, devoted runner, and a passionate music lover.</p>
 

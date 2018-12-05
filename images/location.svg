@@ -17,7 +17,7 @@
 
     .cls-3 {
 		stroke-dasharray: 350;
-		stroke-dashoffset: -350;
+		stroke-dashoffset: 350;
 		-webkit-animation: dash 5s linear forwards;
 		animation: dash 5s infinite linear forwards;
 	}

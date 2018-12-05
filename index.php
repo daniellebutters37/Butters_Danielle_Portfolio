@@ -25,16 +25,28 @@ $fields = array(
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Portfolio: Danielle Butters</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Danielle Butters</title>
+    <!-- styles -->
 	<link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- linked -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png"/>
+
+    <!-- SEO -->
+    <link rel="canonical" href="http://www.daniellebutters.ca/" />
+    <meta name="title" content="Danielle Butters: Designer/Developer">
+    <meta name="description" content="Danielle Butters: Designer/Developer from London, ON">
+    <meta name="author" content="Danielle Butters">
 </head>
 
 <body>
@@ -62,6 +74,8 @@ $fields = array(
           </div>
         </div>
 
+        <object id="lineHeader" data="images/line_header.svg" type="image/svg+xml"></object>
+
         <div id="headingContent" class="wrapper">
             <div id="intro">
                 <p id="wordmark">danielle<br><span>butters</span></p>
@@ -71,11 +85,9 @@ $fields = array(
             <object id="face"data="images/face.svg" type="image/svg+xml"></object>
         </div>
 
-        <object id="lineHeader" data="images/line_header.svg" type="image/svg+xml"></object>
-
-        <div id="scroll" class="wow pulse" data-wow-delay="3s" data-wow-iteration="infinite">
-            <p>scroll</p>
-            <i class="fas fa-chevron-down"></i>
+        <div id="scroll" class="wow fadeInUp" data-wow-delay="4s"data-wow-duration="2s">
+            <p class="wow pulse" data-wow-iteration="infinite">scroll</p>
+            <i class="wow pulse fas fa-chevron-down" data-wow-iteration="infinite"></i>
         </div>
 </header>
 
@@ -101,12 +113,10 @@ $fields = array(
         </div>
 
         <p id="aboutText" class="wow fadeInUp" data-wow-duration="2s">
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati 
-        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id 
-        est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam 
-        libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
-        maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+        I aspire to combine beautiful design with a technical proficiency that leads to quality results.  
+        Meaningful and innovative design motive me to go beyond expectations. The combination of design, 
+        branding and web development give limitless opportunities for creation. When I am not immersed in 
+        the world of web and design I am a fanatic reader, devoted runner, and a passionate music lover.</p>
 
         <div id="resume" class="wow fadeInUp" data-wow-duration="2s"><a href="documents/d_butters_resume.pdf" download="d_butters_resume.pdf" target="_blank">Resume</a></div>
     </div>
@@ -158,7 +168,8 @@ $fields = array(
     <object id="contactLine" class="wow fadeInUp" data-wow-duration="2s" data="images/line_contact.svg" type="image/svg+xml"></object>
     <div id="contactFormSection" class="wrapper">
         <div id="contactText" class="wow fadeInUp" data-wow-duration="2s">
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            <p>Collaboration can be a beautiful thing! Send me a line if you are interested 
+            in my work, want to know more about my skillset, or even just to say hello.</p>
             <object id="location" class="wow fadeInUp" data-wow-duration="2s" data="images/location.svg" type="image/svg+xml"></object>
             <p id="london">london, on</p>
         </div>

@@ -8,12 +8,12 @@
 	#line {
 		stroke-dasharray: 2000;
 		stroke-dashoffset: 2000;
-		-webkit-animation: dash 5s linear forwards;
-		animation: dash 5s infinite linear forwards;
+		-webkit-animation: dash 7s linear forwards;
+		animation: dash 7s infinite linear forwards;
 	}
 
 	@keyframes dash {
-		40% {
+		50% {
 			stroke-dashoffset: 0;
 		}
 		100%{

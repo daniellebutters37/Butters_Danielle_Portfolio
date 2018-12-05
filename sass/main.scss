@@ -511,13 +511,16 @@ nav {
     margin: 0 auto;
     text-align: center;
     margin-top:1%;
-    cursor: pointer;
 }
 
 .controls button {
     border:none;
     outline: none;
     background-color: $white;
+}
+
+.controls i {
+    cursor: pointer;
 }
 
 i {

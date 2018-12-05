@@ -2,10 +2,6 @@
 
 include 'connect.php';
  
-// if(isset($_GET['id'])){
-//     $portfolio_query = 'SELECT * FROM tbl_projects WHERE project_id ='.$_GET['id'].'';
-// }
-
 $portfolio_query = 'SELECT * FROM tbl_projects';
 
 

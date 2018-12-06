@@ -2,7 +2,7 @@
 
 **Motivation**
 This project aims to create a dynamic portfolio website to showcase my projects.
-[https://www.daniellebutters.ca](daniellebutters.ca)
+[daniellebutters.ca](daniellebutters.ca)
 
 **Design**
 * Cinema 4D R19

@@ -1,7 +1,7 @@
 # Portfolio Website: Danielle Butters
 
 **Motivation**
-This project aims to create a dynamic portfolio website to showcase my projects.
+* This project aims to create a dynamic portfolio website to showcase my projects.
 [https://daniellebutters.ca](https://daniellebutters.ca)
 
 **Design**

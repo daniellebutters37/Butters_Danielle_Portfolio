@@ -116,7 +116,7 @@ $fields = array(
         I aspire to combine beautiful design with a technical proficiency that leads to quality results.  
         Meaningful and innovative design motivate me to go beyond expectations. The combination of design, 
         branding and web development give limitless opportunities for creation. When I am not immersed in 
-        the world of web and design I am a fanatic reader, devoted runner, and a passionate music lover.</p>
+        the world of web and design I am an avid reader, dedicated runner, and a music enthusiast.</p>
 
         <div id="resume" class="wow fadeInUp" data-wow-duration="2s"><a href="documents/d_butters_resume.pdf" download="d_butters_resume.pdf" target="_blank">Resume</a></div>
     </div>
@@ -169,7 +169,7 @@ $fields = array(
     <div id="contactFormSection" class="wrapper">
         <div id="contactText" class="wow fadeInUp" data-wow-duration="2s">
             <p>Collaboration can be a beautiful thing! Send me a line if you are interested 
-            in my work, want to know more about my skillset, or even just to say hello.</p>
+            in my work, want to know more about my skillset, or just say hello.</p>
             <object id="location" class="wow fadeInUp" data-wow-duration="2s" data="images/location.svg" type="image/svg+xml"></object>
             <p id="london">london, on</p>
         </div>
